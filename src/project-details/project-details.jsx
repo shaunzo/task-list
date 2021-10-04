@@ -17,7 +17,10 @@ const ProjectDetails = () => {
                     <div><strong>Due Date:</strong><br/>23 November 2021</div>
                     <div><strong>Days Left:</strong><br/>90</div>
                 </Col>
-                <Col><div><strong>Participants:</strong><br/>Shaun Reddiar, John Doe, Jane Doe</div></Col>
+                <Col>
+                    <div><strong>Status:</strong><br/>Not complete</div>
+                    <div><strong>Tasks:</strong><br/>50</div>
+                </Col>
             </Row>
             <Row className="mt-4">
                 <Col>
