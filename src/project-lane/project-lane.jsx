@@ -4,7 +4,7 @@ import ProjectTask from '../project-task/project-task';
 
 const ProjectLane = ({title}) => {
     return (
-        <Col className="project-lane border h-100 rounded me-4 vstack p-3">
+        <Col className="project-lane h-100 rounded me-4 vstack p-3 bg-light">
            <p className="lead">{title}</p>
            <ProjectTask
                 assignee="Joe Soap"
