@@ -1,31 +1,39 @@
 import React from 'react';
 import { Row, Col, ProgressBar  } from 'react-bootstrap';
 
-const ProjectDetails = () => {
+const ProjectDetails = ({
+    dateCreated,
+    createdBy,
+    name,
+    description,
+    dueDate,
+    daysLeft,
+    status,
+    tasks}) => {
     return (
         <div className="project-details w-100">
             <Row>
                 <Col>
-                    <div><strong>Date created:</strong><br/>21 March 2021</div>
-                    <div><strong>Created by:</strong><br/>Shaun Reddiar</div>
+                    <div><strong>Date created:</strong><br/>{dateCreated}</div>
+                    <div><strong>Created by:</strong><br/>{createdBy}</div>
                 </Col>
                 <Col>
-                    <div><strong>Name:</strong><br/>Project 1</div>
-                    <div><strong>Description:</strong><br/>This is just a small description on the project</div>
+                    <div><strong>Name:</strong><br/>{name}</div>
+                    <div><strong>Description:</strong><br/>{description}</div>
                 </Col>
                 <Col>
-                    <div><strong>Due Date:</strong><br/>23 November 2021</div>
-                    <div><strong>Days Left:</strong><br/>90</div>
+                    <div><strong>Due Date:</strong><br/>{dueDate}</div>
+                    <div><strong>Days Left:</strong><br/>{daysLeft}</div>
                 </Col>
                 <Col>
-                    <div><strong>Status:</strong><br/>Not complete</div>
-                    <div><strong>Tasks:</strong><br/>50</div>
+                    <div><strong>Status:</strong><br/>{status}% complete</div>
+                    <div><strong>Tasks:</strong><br/>{tasks}</div>
                 </Col>
             </Row>
             <Row className="mt-4">
                 <Col>
                     <p><strong>Progress:</strong></p>
-                    <ProgressBar max="100" now="50" />
+                    <ProgressBar max="100" now={status} />
                 </Col>
             </Row>
         </div>
